@@ -1,0 +1,11 @@
+baseURL = "http://10.0.0.2:1313/"
+disablePathToLower = true
+languageCode = "zh-cn"
+background = "aa"
+title = "Who am I"
+summaryLength = 100
+hasCJKLanguage = true
+publishDir = "docs"
+
+[params]
+feature_image = "https://static.hxsf.me/images/2015/07/hello-world.jpg-webp"

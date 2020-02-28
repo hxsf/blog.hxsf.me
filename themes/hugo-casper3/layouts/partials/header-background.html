@@ -1,0 +1,45 @@
+{{ if .Site.Params.feature_image }}
+{{ .Scratch.Set "background" .Site.Params.feature_image }}
+{{ end }}
+{{ if .Scratch.Get "background" }}
+    <style type="text/css">
+        .responsive-header-img {
+            background-image: url('{{ .Scratch.Get "background" }}');
+            display: flex;
+            flex: 1 0 0;
+        }
+        
+/* Create a bouncing scroll-down arrow on homepage with cover image */
+.scroll-down {
+    display: block;
+    position: absolute;
+    z-index: 1001;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -16px;
+    width: 34px;
+    height: 34px;
+    font-size: 34px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: bounce 4s 2s infinite;
+    animation: bounce 4s 2s infinite;
+}
+
+/* Stop it bouncing and increase contrast when hovered */
+.scroll-down:hover {
+    color: #fff;
+    -webkit-animation: none;
+    animation: none;
+}
+
+    </style>
+    <div class="outer site-header-background responsive-header-img">
+        <a class="scroll-down icon-arrow-left" href="#site-main" data-offset="-45"><span class="hidden">下拉显示</span></a>
+{{ else }}
+    <div class="outer site-header-background no-image">
+{{ end }}
