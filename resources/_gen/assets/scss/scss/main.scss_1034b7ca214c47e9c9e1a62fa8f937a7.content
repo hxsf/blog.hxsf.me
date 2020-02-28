@@ -826,10 +826,10 @@ body {
   display: flex; }
 
 .post-card {
-  flex: 1 1 301px;
+  flex: 1 0 0;
   flex-direction: column;
   overflow: hidden;
-  margin: 0 0 40px;
+  margin: 0 0 0 0px;
   padding: 0 20px 40px;
   min-height: 220px;
   border-bottom: 1px solid #e9eef1;
@@ -917,9 +917,21 @@ body {
   display: flex;
   align-self: flex-end;
   flex-wrap: wrap;
+  flex: 1 0 50%;
   margin: 0 0 0 4px;
   padding: 0;
   list-style: none; }
+
+.post-card-tag::after {
+  content: " , "; }
+
+.post-card-tag:last-child::after {
+  content: " "; }
+
+.footer-meta-info {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: flex-end; }
 
 .author-list {
   display: flex;
@@ -971,7 +983,7 @@ body {
     display: none; } }
 
 .post-card-byline-content {
-  flex: 1 1 50%;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   margin: 2px 0 0 6px;

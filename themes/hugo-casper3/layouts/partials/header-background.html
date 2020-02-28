@@ -1,6 +1,11 @@
-{{ if .Site.Params.feature_image }}
+{{ if and (.IsHome) (.Site.Params.feature_image) }}
 {{ .Scratch.Set "background" .Site.Params.feature_image }}
 {{ end }}
+
+{{ if .Params.image }}
+{{ .Scratch.Set "background" .Params.image }}
+{{ end }}
+
 {{ if .Scratch.Get "background" }}
     <style type="text/css">
         .responsive-header-img {

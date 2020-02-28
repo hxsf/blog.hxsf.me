@@ -5,12 +5,15 @@ set -e
 
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
+pushd public
+git pull
+popd
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
-
+echo "blog.hxsf.me" > CNAME
 # Add changes to git.
 git add .
 
