@@ -1,4 +1,4 @@
-baseURL = "http://blog.hxsf.me/"
+baseURL = "https://blog.hxsf.me/"
 disablePathToLower = true
 languageCode = "zh-cn"
 background = "aa"
@@ -6,6 +6,8 @@ title = "Who am I"
 summaryLength = 100
 hasCJKLanguage = true
 theme = "hugo-casper3"
+
+disqusShortname  = "blog-hxsf"
 
 [params]
 feature_image = "https://static.hxsf.me/images/2015/07/hello-world.jpg-webp"
